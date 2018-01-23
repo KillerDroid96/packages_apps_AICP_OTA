@@ -48,7 +48,7 @@ import java.io.Serializable;
 public class Version implements Serializable {
 
     private final String[] PHASES = {
-            "EXPERIMENTAL", "RELEASE", "NIGHTLY", "STABLE"
+            "EXPERIMENTAL", "RELEASE", "NIGHTLY", "STABLE", "UNOFFICIAL"
     };
 
     private static final String SEPARATOR = "-";
@@ -57,12 +57,13 @@ public class Version implements Serializable {
     private static final int RELEASE = 1;
     private static final int NIGHTLY = 2;
     private static final int STABLE = 3;
+    private static final int UNOFFICIAL = 4;
 
     private String mDevice;
     private int mMajor = 0;
     private int mMinor = 0;
     private int mMaintenance = 0;
-    private int mPhase = STABLE;
+    private int mPhase = UNOFFICIAL;
     private int mPhaseNumber = 0;
     private String mDate = "0";
 
@@ -192,7 +193,7 @@ public class Version implements Serializable {
                 + mMinor
                 + (mMaintenance > 0 ? "."
                         + mMaintenance : "")
-                + (mPhase != STABLE ? " " + getPhaseName() : "")
+                + (mPhase != UNOFFICIAL ? " " + getPhaseName() : "")
                 + (mPhaseNumber != 0 ? "" + mPhaseNumber : "")
                 + " (" + mDate + ")";
     }
