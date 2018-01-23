@@ -77,8 +77,8 @@ import java.util.List;
 public class MainActivity extends Activity implements UpdaterListener, DownloadCallback,
         OnItemClickListener {
 
-    private static final String CHANGELOG = "https://plus.google.com/app/basic/communities/101008638920580274588";
-    private static final String DOWNLOAD = "http://dwnld.aicp-rom.com/?device=";
+    private static final String CHANGELOG = "https://androidfilehost.com/?w=files&flid=242719";
+    private static final String DOWNLOAD = "https://androidfilehost.com/?w=files&flid=242719";
     private static final String STATE = "STATE";
 
     public static final int STATE_UPDATES = 0;
