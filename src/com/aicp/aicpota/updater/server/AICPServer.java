@@ -34,7 +34,7 @@ import java.util.List;
 
 public class AICPServer implements Server {
 
-    private static final String URL = "http://updates.aicp-rom.com/update.php?device=%s";
+    private static final String URL = "https://raw.githubusercontent.com/KillerDroid96/packages_apps_AICP_OTA/o8x/update.php?device=%s";
 
     private String mError = null;
     private Version mVersion;
